@@ -11,16 +11,16 @@ liked_songs = {
 
 
 def write_liked_songs_to_file(liked_songs, file_name):
-    try:
-        with open("songs.txt", "w") as file:
+    with open("songs.txt", "w") as file:
+        try:
             file.write("Liked Songs:\n")
             for title, artist in liked_songs.items():
                 file.write(f"{title} by {artist}\n")
             print(f"Successfully added songs to {file_name}")
-    except IOError:
-        print("Songs not added to file because the file is not found")
-    finally:
-        file.close()
+        except IOError:
+            print("Songs not added to file because the file is not found")
+        finally:
+            file.close()
 
 
 write_liked_songs_to_file(liked_songs, "songs.txt")

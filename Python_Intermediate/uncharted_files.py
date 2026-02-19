@@ -4,13 +4,13 @@ with open("messages.txt", "w") as file:
     pass
 
 def write_to_file(message: str):
-    try:
-        with open("messages.txt", "a") as file:
+    with open("messages.txt", "a") as file:
+        try:
             file.write(message + "\n")
-    except IOError:
-        print("There is an issue writing the file")
-    finally:
-        file.close()
+        except IOError:
+            print("There is an issue writing the file")
+        finally:
+            file.close()
 
 write_to_file(message)
 
@@ -24,15 +24,15 @@ for i in messages:
     write_to_file(i)
 
 def read_file(filename: str):
-    try:
-        with open(filename, "r+") as file:
+    with open(filename, "r+") as file:
+        try:
             lines = file.readlines()
             for line in lines:
                 print(line, end="")
-    except FileNotFoundError:
-        print("There is an issue reading the file")
-    finally:
-        file.close()
+        except FileNotFoundError:
+            print("There is an issue reading the file")
+        finally:
+            file.close()
 
 read_file("messages.txt")
 
