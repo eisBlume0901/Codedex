@@ -24,7 +24,7 @@ for i in messages:
     write_to_file(i)
 
 def read_file(filename: str):
-    with open(filename, "r+") as file:
+    with open(filename, "r+", encoding="utf-8") as file:
         try:
             lines = file.readlines()
             for line in lines:

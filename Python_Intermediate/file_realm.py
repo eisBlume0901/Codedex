@@ -25,7 +25,7 @@ def write_liked_songs_to_file(liked_songs, file_name):
 
 write_liked_songs_to_file(liked_songs, "songs.txt")
 
-file = open("songs.txt", "r")
+file = open("songs.txt", "r", encoding="utf-8")
 lines = file.readlines()
 
 for line in lines:

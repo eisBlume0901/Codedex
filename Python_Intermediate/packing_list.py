@@ -9,7 +9,7 @@ data = [
     ["Ribbon Clip" , 4]
 ]
 try:
-    with open("packing_list.csv", "r") as file:
+    with open("packing_list.csv", "r", encoding="utf-8") as file:
         csv_reader = csv.reader(file)
 
         for row in csv_reader:
